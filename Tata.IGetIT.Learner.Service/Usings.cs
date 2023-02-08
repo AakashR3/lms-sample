@@ -1,0 +1,10 @@
+﻿global using Microsoft.Extensions.Options;
+global using NLog;
+global using System.Text;
+global using Tata.IGetIT.Learner.Repository.Constants;
+global using Tata.IGetIT.Learner.Repository.Interface;
+global using Tata.IGetIT.Learner.Repository.Models;
+global using Tata.IGetIT.Learner.Repository.Models.Configurations;
+global using Tata.IGetIT.Learner.Service.Helpers;
+global using Tata.IGetIT.Learner.Service.Interfaces;
+global using Tata.IGetIT.Repository.Models;

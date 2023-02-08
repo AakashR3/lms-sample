@@ -1,0 +1,75 @@
+--SELECT [Id]
+--      ,[Name]
+--      ,[Description]
+--      ,[AccountID]
+--      ,[CourseID]
+--      ,[Attendees]
+--	  ,[Session]
+--      ,[CreatedDate]
+--	  ,[ModifiedDate]
+--	  ,ROW_NUMBER() OVER (ORDER BY [Id] DESC) as RowNumber into #TempTrainings
+--  FROM [dbo].[V2_Trainings] as T
+--  Left join 
+--  (
+--   Select TrainingID,COUNT(*) as 'Session' from [V2_TrainingSessions]
+--   Group by TrainingID
+--  ) as S on S.TrainingID=T.Id
+   
+--  WHERE IsActive =1 
+--		AND CreatedBy = @UserId
+--  ORDER BY CreatedDate DESC
+
+--  SELECT @TotalRecords = COUNT(1) FROM #TempTrainings 
+--  SET @TotalRecords =  @TotalRecords
+
+--   SELECT  
+--       [Id]
+--      ,[Name]
+--      ,[Description]
+--      ,[AccountID]
+--      ,[CourseID]
+--      ,[Attendees]
+--	  ,[Session] as 'NoOfSession'
+--      ,[CreatedDate] FROM #TempTrainings
+--       WHERE RowNumber between (@PageNumber - 1) * @PageSize + 1 and @PageNumber * @PageSize
+
+--   DROP TABLE #TempTrainings
+       
+
+
+			--SELECT [Id] as 'TrainingID'
+			--,[Name]
+			--,[Description]
+			--,[AccountID]
+			--,[CourseID]			
+			----,(stuff((
+   ----                 select ',' + u.EmailID
+   ----                 from V2_TrainingUserMap u
+   ----                 where 
+   ----                 u.TrainingID = T.ID
+   ----                 order by u.EmailID
+   ----                 for xml path('')
+   ----             ),1,1,'')) as Attendees
+   --,
+   --             (select u.EmailID
+   --             from V2_TrainingUserMap u
+   --             where 
+   --             u.TrainingID = T.ID
+   --             order by u.EmailID FOR JSON AUTO)
+   --             as Attendees
+			--,[Session] as 'NoOfSession'
+			--,Convert(Varchar,Convert(date,[CreatedDate])) as 'CreatedDate'
+			--,Convert(Varchar,Convert(date,[ModifiedDate])) as 'ModifiedDate'
+			--,ROW_NUMBER() OVER (ORDER BY [Id] DESC) as RowNumber
+			
+			--FROM [dbo].[V2_Trainings] as T
+			--Left join 
+			--(
+			--Select TrainingID,COUNT(*) as 'Session' from [V2_TrainingSessions]
+			--where IsActive=1
+			--Group by TrainingID
+			--) as S on S.TrainingID=T.Id			
+			--WHERE IsActive =1 
+			--AND CreatedBy = @UserId
+			--AND [Name] like Case when @Filter='' then '%%' else '%' + @Filter + '%' end
+			--ORDER BY CreatedDate DESC

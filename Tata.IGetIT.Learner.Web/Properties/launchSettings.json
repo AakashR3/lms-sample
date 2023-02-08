@@ -1,0 +1,70 @@
+{
+  "profiles": {
+    "Tata.IGetIT.Learner.Web-dev": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "dev",
+        "AZ_CONFIG_CS": "Endpoint=https://igetitv2-learnerappconfig.azconfig.io;Id=TnmO-li-s0:3KUwQ8j+aknBOQyxOgq3;Secret=mZWtAh1MNS5Bvr15HIgaYALAa0MuevQGNYw7PZhxLC4=",
+        "AZ_KEY_VAULT_SEC": "7Uh8Q~e_3qPsLYVMiNPCX0t7GSmmq~VA7yoaMapW",
+        "AZ_AI_INS_KEY": ""
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7155;http://localhost:5155"
+    },
+    "Tata.IGetIT.Learner.Web-qa": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "uat",
+        "AZ_CONFIG_CS": "",
+        "AZ_KEY_VAULT_SEC": "",
+        "AZ_AI_INS_KEY": ""
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7155;http://localhost:5155"
+    },
+    "Tata.IGetIT.Learner.Web-prod": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "prod",
+        "AZ_CONFIG_CS": "",
+        "AZ_KEY_VAULT_SEC": "",
+        "AZ_AI_INS_KEY": ""
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7155;http://localhost:5155"
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "dev",
+        "AZ_CONFIG_CS": "",
+        "AZ_KEY_VAULT_SEC": "",
+        "AZ_AI_INS_KEY": ""
+      }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "publishAllPorts": true,
+      "useSSL": true
+    }
+  },
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:34427",
+      "sslPort": 44351
+    }
+  }
+}

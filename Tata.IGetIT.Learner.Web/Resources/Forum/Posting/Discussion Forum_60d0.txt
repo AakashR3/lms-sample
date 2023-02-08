@@ -1,0 +1,48 @@
+CreatePost
+ Title
+ Desc
+ FilePath
+
+EditPost
+ PostID
+ Title
+ Desc
+ FilePath
+
+ListPostandResponse
+
+  Post
+    PostID 
+    Title
+    CreatedBy (Name)
+    CreatedTime
+    NoOfReply
+    Role
+ 
+Reply
+  ReplyText
+  ResponseTime
+  ReplyBy   
+
+
+CreateResponse
+   PostID
+   ResponseBy
+   ResponseTime
+
+
+V2_Forum_Create_Posting
+V2_Forum_Update_Posting
+V2_Forum_Create_Reply
+V2_Forum_Update_Reply
+V2_Forum_Delete_Posting
+V2_Forum_Delete_Reply
+
+ForumStatus
+ForumReply
+ForumPosting
+
+
+
+https://code-maze.com/upload-files-dot-net-core-angular/	
+https://learn.microsoft.com/en-us/azure/storage/blobs/storage-blob-upload
