@@ -50,3 +50,4 @@ ADD ./Tata.IGetIT.Learner.Web/Templates /app/Templates
 ADD ./Tata.IGetIT.Learner.Web/Downloads/Invoice /app/Downloads/Invoice
 COPY --from=publish /app .
 ENTRYPOINT ["dotnet", "Tata.IGetIT.Learner.Web.dll"]
+#test
